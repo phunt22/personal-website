@@ -1,7 +1,7 @@
 {
   "name": "persweb",
   "version": "0.1.0",
-  "homepage": "https://phunt22.github.io/personal-website",
+"homepage": "https://phunt22.github.io/personal-website",
   "private": true,
   "dependencies": {
     "@phosphor-icons/react": "^2.1.7",

@@ -6,7 +6,7 @@ import Tech from './components/Tech';
 import Portfolio from './components/Portfolio';
 import ForFun from './components/ForFun';
 import { useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import REV from './components/Projects/Rev'
 import HFS from './components/Projects/HFS'
