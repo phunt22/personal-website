@@ -1,0 +1,179 @@
+@import '../colors.css';
+
+.technologies {
+    text-align: center;
+    padding: 0px 0px;
+    overflow: hidden;
+}
+
+.technologies h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+/* Highlighted Section */
+.highlighted-section {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap; 
+    gap: 20px;
+    margin-bottom: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.highlighted-item {
+    background-color: #eef7ff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: 300px; 
+    transition: transform 0.3s;
+}
+
+.highlighted-item:hover {
+    transform: scale(1.1);
+}
+
+.highlighted-icon {
+    font-size: 50px;
+    margin-bottom: 10px;
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlighted-item p {
+    font-size: 1em;
+    margin: 0;
+    font-weight: bold;
+    color: black
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden; 
+    position: relative;
+}
+
+.carousel-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 30s linear infinite;
+}
+
+/* slower and opposite direction */
+.carousel-content-reverse {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-reverse 60s linear infinite; 
+}
+
+/* carousel card */
+.carousel-item {
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    width: 80px;
+    padding: 5px;
+    background-color: #f9f9f9;
+    color: black;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+/* hover */
+.carousel-item:hover {
+    /* transform: scale(1.1);
+    z-index: 4; */
+    background-color: var(--uwpurple);
+    animation: 0.6s;
+    color: var(--uwgold);
+    border-color: var(--uwgold);
+}
+
+.tech-icon {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+.carousel-item p {
+    font-size: 0.8em;
+    margin: 0;
+}
+
+
+/* animation for forward and reverse */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@keyframes scroll-reverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* 2 per row on medium screens */
+@media (max-width: 768px) {
+    .highlighted-section {
+       gap: 15px;
+    }
+
+    .highlighted-item {
+        flex: 1 1 calc(50% - 20px);
+        max-width: 200px;
+    }
+
+    .highlighted-icon {
+        font-size: 50px;
+    }
+
+    .carousel-item {
+        width: 60px;
+        padding: 5px;
+    }
+
+    .tech-icon {
+        font-size: 20px;
+    }
+
+    .carousel-item p {
+        font-size: 0.6em;
+    }
+}
+
+/* go vertical on phones */
+@media (max-width: 450px) {
+    .highlighted-section {
+        gap: 10px;
+    }
+
+    .highlighted-item {
+        flex: 1 1 calc(100% - 10px); /* Full width on small screens */
+        max-width: none;
+    }
+
+    .highlighted-icon {
+        font-size: 40px;
+    }
+
+    .highlighted-item p {
+        font-size: 0.8em;
+    }
+}
